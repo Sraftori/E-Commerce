@@ -2,6 +2,10 @@ import bag from './assets/photo bag.png'
 import star from './assets/Star 2.svg'
 import logo from './assets/Logo.svg'
 import promoLogo from './assets/Men cosmetic advert.svg'
+import signIn from './assets/sign in.png'
+import favourites from './assets/favorides.png'
+import shop from './assets/card.png'
+
 
 function App() {
 return (
@@ -74,13 +78,22 @@ return (
 
   <div className="flex items-center gap-6 text-gray-200">
     <button className="flex items-center gap-1.5 hover:text-white">
-      <span>👤 Sign in</span>
+      <span>
+        <img src={signIn} alt="Sign In" className="w-4 h-4 object-contain" />
+      </span>
+      <span>Sign in</span>
     </button>
-    <button className="flex items-center gap-1.5 hover:text-white">
-      <span>♡ Favorites</span>
+    <button  className="flex items-center gap-1.5 hover:text-white">
+      <span>
+        <img src={favourites} alt="Favourites" className="w-4 h-4 object-contain" />
+      </span>
+      <span>Favorites</span>
     </button>
-    <button className="flex items-center gap-1.5 hover:text-white">
-      <span>🛍️ Card</span>
+    <button  className="flex items-center gap-1.5 hover:text-white">
+      <span>
+        <img src={shop} alt="Card" className="w-4 h-4 object-contain" />
+      </span>
+      <span>Card</span>
       <span className="bg-emerald-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
         3
       </span>
