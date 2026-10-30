@@ -8,6 +8,9 @@ function Products({title = "Test Product", price = 100 , rate = 0 , discount = 0
   // L3 => Logic
   // L4 => View
   const discounted = price - (price * discount / 100);
+
+
+  // const name = username ? "Approved" : "Not Approved"; if in ternary operator
     return(
         <>
           <div className="flex gap-5">
@@ -57,12 +60,16 @@ function Products({title = "Test Product", price = 100 , rate = 0 , discount = 0
           <div className="card-bottom-price flex items-center justify-between gap-0.3">
             <span className="text-sm font-bold text-red-500">
 
-            {discounted}$
+              {discounted}$
 
             </span>
-            <del className="text-sm text-gray-500">{price}$</del>
-            <span className="sale py-0.75 px-1.5 rounded-xs bg-red-off text-[8px] font-semibold text-white">{discount}%</span>
-          </div>
+          
+
+              <del className="text-sm text-gray-500">{price}$</del>
+              <span className="sale py-0.75 px-1.5 rounded-xs bg-red-off text-[8px] font-semibold text-white">{discount}%</span>
+           
+            
+            </div>
           </div>
         
         
