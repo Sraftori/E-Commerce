@@ -1,20 +1,18 @@
-import FlashSales from './components/home/FlashSales';
-import HeaderFooter from './components/layouts/HeaderFooter';
+import Home from './pages/Home';
 
 
 function App() {
-return (
-<>
- <main>
+  return (
+  <>
+    <main>
 
-  <HeaderFooter />
-  <FlashSales />
-  
+     <Home />  
 
 
 
-</main>
-</>
-)}
+    </main>
+  </>
+  )
+}
 
 export default App

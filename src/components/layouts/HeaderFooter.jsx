@@ -73,18 +73,23 @@ function HeaderFooter() {
           <div className="w-[1px] h-7 bg-gray-700" />
         
           <div className="flex items-center gap-6 text-gray-200">
+            <div className="hover:scale-110 transition-transform duration-100">
             <button className="flex items-center gap-1.5 hover:text-white">
               <span>
-                <img src={signIn} alt="Sign In" className="w-4 h-4 object-contain" />
+                <img src={signIn} alt="Sign In" className="w-4 h-4 object-contain hover:scale-110 transition-transform duration-100" />
               </span>
               <span>Sign in</span>
             </button>
+            </div>
+            <div className="hover:scale-110 transition-transform duration-100">
             <button  className="flex items-center gap-1.5 hover:text-white">
               <span>
-                <img src={favourites} alt="Favourites" className="w-4 h-4 object-contain" />
+                <img src={favourites} alt="Favourites" className="w-4 h-4 object-contain hover:scale-110 transition-transform duration-100" />
               </span>
               <span>Favorites</span>
             </button>
+            </div>
+            <div className="hover:scale-110 transition-transform duration-100">
             <button  className="flex items-center gap-1.5 hover:text-white">
               <span>
                 <img src={shop} alt="Card" className="w-4 h-4 object-contain" />
@@ -94,6 +99,7 @@ function HeaderFooter() {
                 3
               </span>
             </button>
+            </div>
           </div>
         
         

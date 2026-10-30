@@ -10,8 +10,8 @@ function FlashSales() {
           </div>
         
         <div className="flex gap-5">
-        <Products />
-        <Products />
+        <Products title="Shoulder Bag" price={50} rate={4} discount={40}/>
+        <Products title="Laptop" price={1000} discount={50}/>
         <Products />
         <Products />
         </div>

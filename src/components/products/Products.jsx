@@ -2,11 +2,16 @@ import bag from '../../assets/photo bag.png';
 import star from '../../assets/Star 2.svg';
 
 
-function Products() {
+function Products({title = "Test Product", price = 100 , rate = 0 , discount = 0}) {
+  // L1 => Data
+  // L2 => Effects
+  // L3 => Logic
+  // L4 => View
+  const discounted = price - (price * discount / 100);
     return(
         <>
           <div className="flex gap-5">
-        <div className="card flex flex-col w-75 bg-white shadow-2xl rounded-lg">
+        <div className="card flex flex-col w-75 bg-white shadow-2xl rounded-lg hover:scale-105 transition-transform duration-300">
           <div className="card-top flex flex-col items-center gap-1.5 py-4">
             <p className="text-sm font-extrabold text-gray-400">Deal of the Day</p>
              <div className="card-date flex flex-col items-center">
@@ -32,7 +37,11 @@ function Products() {
         </div>
         
         <div className="card-bottom flex flex-col gap-1.5 py-4 px-18.5">
-          <h3 className="text-base font-bold text-gray-800">Tonny Black</h3>
+          <h3 className="text-base font-bold text-gray-800">
+            
+            {title}
+            
+          </h3>
           <p className="text-xs text-gray-600">Shoulder bag-White-Plain</p>
           <div className="card-bottom-rating flex">
             <div className="flex items-center gap-px">
@@ -41,14 +50,18 @@ function Products() {
             <img className="size-3" src={star}/>
             <img className="size-3" src={star}/>
             </div>
-            <span className="flex gap-1 text-xs text-gray-500">(54)
+            <span className="flex gap-1 text-xs text-gray-500">{rate}
             </span>
         
           </div>
           <div className="card-bottom-price flex items-center justify-between gap-0.3">
-            <span className="text-sm font-bold text-red-500">$69.99</span>
-            <del className="text-sm text-gray-500">$129.99</del>
-            <span className="sale py-0.75 px-1.5 rounded-xs bg-red-off text-[8px] font-semibold text-white">-40%</span>
+            <span className="text-sm font-bold text-red-500">
+
+            {discounted}$
+
+            </span>
+            <del className="text-sm text-gray-500">{price}$</del>
+            <span className="sale py-0.75 px-1.5 rounded-xs bg-red-off text-[8px] font-semibold text-white">{discount}%</span>
           </div>
           </div>
         
