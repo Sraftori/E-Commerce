@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
+import { useRef } from "react";
 import Home from "./pages/Home";
 import Navbar from "./components/layouts/Navbar";
 import CartView from "./components/cart/CartView";
@@ -36,8 +37,8 @@ function App() {
     }
   };
     // total count setter
-
-  const cartCount = cart.reduce((total, item) => total + item.qty, 0);
+  const cartCount = useRef(0);
+  cartCount.current = cart.reduce((total, item) => total + item.qty, 0);
 
   const toggleHandler = () => {
     setIsCartOpen(!isCartOpen);
@@ -46,7 +47,7 @@ function App() {
   return (
     <>
       <Navbar
-      cartCount={cartCount}
+      cartCount={cartCount.current}
       onCartView={toggleHandler}
       searchValue={search}
       onSearchChange={searchHandler} />
